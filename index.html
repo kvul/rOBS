@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rOBS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap">
+  <style>
+    body {
+      font-family: 'JetBrains Mono', monospace; 
+      background-image: none !important;
+      background-color: rgba(40, 42, 54, 1) !important;
+    }
+
+    body * {
+      color: rgba(248, 248, 242, 1) !important;
+      background-color: rgba(40, 42, 54, 1) !important;
+    }
+   
+    .container {
+      margin-top: 50px;
+    }
+
+    .page-title {
+      font-size: 4rem;
+      margin-bottom: 30px;
+      color: rgba(255, 184, 108, 1) !important;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      color: rgba(80, 250, 123, 1) !important;
+      background-color: transparent !important;
+    }
+   
+    a:link {
+      color: rgb(255, 0, 234) !important;
+    }
+    a:visited {
+      color: rgb(255, 96, 242) !important;
+    }
+
+    a:hover {
+      color: rgb(0, 204, 255) !important;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-title">rOBS</h1>
+
+    <h2 class="section-title">Table of Contents</h2>
+    <ul>
+      <li><a href="#rationale">Rationale</a></li>
+      <li><a href="#included-plugins">Included Plugins</a>
+        <ul>
+          <li><a href="#install">i) Install</a></li>
+          <li><a href="#configure">ii) Configure</a></li>
+          <li><a href="#viewing">iii) Viewing</a></li>
+        </ul>
+      </li>
+    </ul>
+    
+    <div class="section" id="rationale">
+      <h2 class="section-title">Rationale</h2>
+      <p>Discord's streaming tools aren't adequate for certain circumstances which prevents it from being as idiot-proof as it might like. While convenient and low-latency, its no-config nature can lead to headaches and the video quality can be sub-par, even with a Discord Nitro subscription. Luckily, we have a solution in the form of a custom fork of OBS which includes a WebRTC plugin and Broadcast Box, the backend to support this.<br>
+        Something's in OBS aren't perfect either, so I've included some plugins to make streaming a bit easier, like <b>win-capture-audio</b> to capture application's audio directly, bypassing the need for VoiceMeter Banana or any other external tools to route audio around voice chat or other situations. Go through the list below and see all the added functionality.      </p>
+    </div>
+
+    <div class="section" id="included-plugins">
+      <h2 class="section-title">Included Plugins</h2>
+      <p>Here are the plugins that come with the rOBS:
+      </p>
+      <ul>
+        <li><a href="https://obsproject.com/forum/resources/3d-effect.1692/">3D Effect 0.0.2</a></li>
+        <li><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/">Advanced Scene Switcher 1.22.1</a></li>
+        <li><a href="https://obsproject.com/forum/resources/background-removal-virtual-green-screen-low-light-enhance.1260/">Background Removal / Virtual Green-screen & Low-Light Enhance v1.1.1</a></li>
+        <li><a href="https://github.com/prgmitchell/blur-filter">blur-filter</a></li>
+        <li><a href="https://obsproject.com/forum/resources/downstream-keyer.1254/">Downstream Keyer 0.2.6</a></li>
+        <li><a href="https://obsproject.com/forum/resources/dvd-screensaver.762/">dvd screensaver 1.1</a></li>
+        <li><a href="https://obsproject.com/forum/resources/gradient-source.1172/">Gradient Source 0.3.2</a></li>
+        <li><a href="https://github.com/univrsal/input-overlay">input-overlay 5.0.3</a></li>
+        <li><a href="https://obsproject.com/forum/resources/move.913/">Move 2.9.1</a></li>
+        <li><a href="https://github.com/obs-ndi/obs-ndi">obs-ndi</a> #OPTIONAL: requires included <b>NDI 5.5.3 Runtime.exe</b></li>
+        <li><a href="https://github.com/exeldro/obs-shaderfilter">obs-shaderfilter 2.0</a></li>
+        <li><a href="https://github.com/Off-World-Live/obs-spout2-plugin">obs-spout2-plugin</a></li>
+        <li><a href="https://obsproject.com/forum/resources/openvr-input-plugin.534/">OpenVR input plugin 1.1</a> (memory leak if source added but not active)</li>
+        <li><a href="https://obsproject.com/forum/resources/recursion-effect.1008/">Recursion Effect 0.0.5</a></li>
+        <li><a href="https://obsproject.com/forum/resources/replay-source.686/">Replay Source 1.6.12</a></li>
+        <li><a href="https://obsproject.com/forum/resources/scene-collection-manager.1434/">Scene Collection Manager 0.0.8</a></li>
+        <li><a href="https://obsproject.com/forum/resources/source-clone.1632/">Source Clone 0.1.4</a></li>
+        <li><a href="https://obsproject.com/forum/resources/time-warp-scan.1167/">Time Warp Scan 0.1.7</a></li>
+        <li><a href="https://obsproject.com/forum/resources/virtual-background-by-aisegment.1546/">Virtual Background By AISegment 1.0</a></li>
+        <li><a href="https://obsproject.com/forum/resources/waveform.1423/">Waveform 1.7.0</a></li>
+        <li><a href="https://obsproject.com/forum/resources/win-capture-audio.1338/">win-capture-audio 2.2.3-beta</a></li>
+      </ul>
+    </div>
+
+    <div class="section" id="install">
+      <h3 class="section-title">i) Install</h3>
+      <p>
+        To install rOBS, simply unzip <a href="https://drive.google.com/uc?export=download&id=1nZPMMqfL9iIN-rzzZnwsgbb5n_-Se8LF">rOBS.7z</a> to anywhere! (For NDI support, run the included <b>NDI 5.5.3 Runtime.exe</b> inside the top directory.)
+    <br>To run rOBS, open <b>bin\64bit\obs64.exe</b> Create a shortcut to this destination if you'd like.
+      </p>
+    </div>
+
+    <div class="section" id="configure">
+      <h3 class="section-title">ii) Configure</h3>
+      <p> You can use rOBS like your normal OBS install, it might even port over your existing scenes from another install of OBS. For our uses however, we will be taking advantage of someone's Broadcast Box instance. I'll be spinning up my own <b>soon&trade;</b>.<br>
+        Use these settings:
+        <ul><b>File > Settings > Stream</b><br>
+               <b>Service</b> to <b>WHIP</b><br>
+               <b>Server</b> to <b>https://b.siobud.com/api/whip</b><br>
+               <b>Bearer Token</b> to anything you want. Something long so others are unlikely to spy.</ul>
+        We'll leave the quality settings alone until we can properly stress test the servers.
+    
+    <div class="section" id="viewing">
+            <h3 class="section-title">iii) Viewing</h3>
+            <p>This is the easy part! Go to <a href="https://b.siobud.com/">b.siobud.com</a>, and enter in the streamkey. Finito.
+
+    
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
